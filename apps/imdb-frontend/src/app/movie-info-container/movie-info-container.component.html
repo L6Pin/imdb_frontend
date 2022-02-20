@@ -1,0 +1,99 @@
+<div class="movie-info-container">
+  <!-- <h3>{{ movieInfo?.tagline }}</h3>
+
+  <p>{{ movieInfo?.overview }}</p> -->
+
+  <div class="movie-poster-container">
+    <img
+      class="backdrop"
+      *ngIf="movieInfo"
+      src="https://image.tmdb.org/t/p/original/{{ movieInfo?.backdrop_path }}"
+      alt=""
+    />
+    <div class="gradient"></div>
+    <div class="poster-details-container">
+      <h2 class="title">
+        <a href="{{ movieInfo?.homepage }}" target="_blank">{{ movieInfo?.original_title }}</a>
+      </h2>
+      <div class="poster-movie-info">
+        <span>{{ movieInfo?.release_date.split('-')[0] }}</span>
+        <span> • </span>
+        <span>{{ movieInfo?.adult ? 'M' : 'PG' }}</span>
+        <span> • </span>
+        <span>{{ movieInfo?.runtime }}m</span>
+      </div>
+    </div>
+  </div>
+  <div class="movie-info">
+    <div class="genre-container">
+      <p class="movie-genre" *ngFor="let genre of movieInfo?.genres">
+        {{ genre.name }}
+      </p>
+    </div>
+    <p class="movie-overview">
+      {{ movieInfo?.overview }}
+    </p>
+    <!-- <div class="movie-trailers-container">
+      <h3>Trailers</h3>
+      <div class="movie-trailers">
+        <iframe
+          *ngFor="let trailer of movieTrailerLinks"
+          height="250"
+          width="300"
+          style="margin-right: 10px"
+          [src]="sanitizer.bypassSecurityTrustResourceUrl(trailer)"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
+    </div> -->
+
+    <div class="details-container">
+      <h3>Details</h3>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th>Status</th>
+            <td>{{ movieInfo?.status }}</td>
+          </tr>
+          <tr>
+            <th>Budget</th>
+            <td>${{ movieInfo?.budget | number }}</td>
+          </tr>
+          <tr>
+            <th>Language</th>
+            <td class="language">{{ movieInfo?.original_language }}</td>
+          </tr>
+          <tr>
+            <th>Revenue</th>
+            <td>${{ movieInfo?.revenue | number }}</td>
+          </tr>
+          <tr>
+            <th>Review score</th>
+            <td>{{ movieInfo?.vote_average }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="cast-container">
+      <h3>Cast</h3>
+      <div class="actors-container">
+        <div class="actor" *ngFor="let actor of movieCast">
+          <div class="profile-pic-container">
+            <img
+              src="https://www.themoviedb.org/t/p/original/{{
+                actor.profile_path
+              }}"
+              alt=""
+            />
+          </div>
+          <b>{{ actor.original_name }}</b>
+          <p>as</p>
+          <p>{{ actor.character }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

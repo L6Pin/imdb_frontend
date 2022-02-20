@@ -1,0 +1,71 @@
+<div class="form">
+  <h4 id="h4">{{ 'login.signin' | translate }}</h4>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+    <div class="form-group">
+      <mat-form-field class="input" appearance="fill" color="accent">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+    </div>
+    <mat-error
+      class="form-text text-muted"
+      *ngIf="
+        loginForm.controls.email.touched &&
+        loginForm.controls.email.errors?.required
+      "
+    >
+      {{ 'login.emailAlert' | translate }}
+    </mat-error>
+    <mat-error
+    class="form-text text-muted"
+    *ngIf="
+      loginForm.controls.email.errors?.pattern
+    "
+  >
+    {{ 'login.emailAlertRegex' | translate }}
+  </mat-error>
+    <div class="form-group">
+      <mat-form-field class="input" appearance="fill" color="accent">
+        <mat-label color="accent">Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          [type]="hidePw ? 'password' : 'text'"
+          color="accent"
+        />
+        <mat-icon matSuffix (click)="hidePw = !hidePw">{{hidePw ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <mat-error
+        class="form-text text-muted"
+        *ngIf="
+          loginForm.controls.password.touched &&
+          loginForm.controls.password.errors?.required
+        "
+      >
+        {{ 'login.missingPassword' | translate }}
+      </mat-error>
+      <mat-error
+        class="form-text text-muted"
+        *ngIf="loginForm.controls.password.errors?.['minlength'] || loginForm.controls.password.errors?.['maxlength']"
+      >
+        {{ 'login.passwordLength' | translate }}
+      </mat-error>
+      <button class="forgotPass" (click)="openForgotPasswordDialog()" type="button">{{ 'login.forgotPassword' | translate }}</button>
+    </div> 
+    <button class="login"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!loginForm.valid"
+    >
+      {{ 'login.button' | translate }}
+    </button>
+  </form>
+  <div class="fb-container">
+    <button class="fb-login-btn" type="button"><a id="fb" [href]='fbUrl'> Continue with Facebook</a></button>
+  </div>
+  <div class="sing-in-container">
+    <p>{{ 'login.signUp' | translate }}</p>
+    <a routerLink="/">{{ 'login.register' | translate }}</a>
+  </div>
+</div>

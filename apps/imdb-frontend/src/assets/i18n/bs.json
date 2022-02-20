@@ -1,0 +1,86 @@
+{
+  "lang": {
+    "bs": {"name": "Bosanski", "flag": "ba"},
+    "en": {"name": "English", "flag": "gb"}
+},
+  "navBar": {
+    "register": "Registracija",
+    "login": "Prijava",
+    "dashboard": "Dashboard",
+    "movies": "Filmovi",
+    "logout": "Odjavi se"
+  },
+
+  "registration": {
+    "createAcc": "Napravi novi račun",
+    "button": "REGISTRUJ SE",
+    "alreadyUser": "Imas već račun?",
+    "login": "Prijavi se",
+    "emailAlert": "Neispravno formirana email adresa!",
+    "missingEmail": "Molimo Vas unesite email adresu",
+    "missingPassword": "Molim Vas unesite šifru!",
+    "passwordReq": "Šifra treba da sadrži jedno veliko slovo, jedno malo slovo, jednu cifru, jedan specijalan karakter!",
+    "passwordLength": "Šifra treba da sadrži 8 do 12 karaktera! ",
+    "title": "Najbolje mjesto za sve stvari vezane za filmove",
+    "confirmEmail": "Email za potvrdu je poslat na Vašu email adresu",
+    "errors": {
+      "userExists": "Korisnik je već registrovan"
+    }
+  },
+
+  "login": {
+    "signin": "Prijavi se",
+    "emailAlert": "Molim vas unesite email adresu",
+    "missingPassword": "Molim vas unesite šifru!",
+    "passwordLength": "Šifra treba da sadrži 8 do 12 karaktera!",
+    "button": "PRIJAVI SE",
+    "signUp": "Nemate već račun?",
+    "register": "REGISTRUJ SE",
+    "errors": {
+      "emailPassword": "Email ili lozinka nisu tačni",
+      "emailNotConfirmed": "Nalog nije potvrđen, proverite Vaš email"
+    },
+    "forgotPassword": "Zaboravio si šifru?",
+    "emailAlertRegex": "Neispravno formirana email adresa!"
+  },
+  "interceptor": {
+    "errors": {
+      "accessDenied": "Pristup onemogućen. Prijavite se ponovo"
+    }
+  },
+  "error": {
+    "close": "Zatvori",
+    "server": "Greška na serveru, pokušajte opet kasnije"
+  },
+  "forgotPassword": {
+    "emailAlert": "Molim vas unesite email adresu",
+    "requiredPass": "Molim vas unesite šifru!",
+    "requiredConfirmPass": "Molim vas ponovite novu šifru!",
+    "passNotSame": "Šifre se ne podudaraju!",
+    "regexPassword": "Šifra treba da sadrži jedno veliko slovo, jedno malo slovo, jednu cifru, jedan specijalan karakter!",
+    "cancel": "Zatvori",
+    "send": "Pošalji",
+    "emailSent": "Email za promjenu sifre je stigao na vasu email adresu",
+    "emailMistake": "Email nije poslan",
+    "errors": {
+      "userDoesNotExist": "Korisnik sa tom email adresom ne postoji"
+    },
+     "emailAlertRegex": "Neispravno formirana email adresa!"
+  },
+  "resetPassword": {
+    "title": "Promijeni šifru",
+    "newPassword": "Nova šifra:",
+    "confirmPassword": "Potvrdi šifru:",
+    "passwordAlert": "Molim vas unesite šifru!",
+    "confirmAlert": "Molim vas ponovite novu šifru!",
+    "regexPassword": "Šifra treba da sadrži jedno veliko slovo, jedno malo slovo, jednu cifru, jedan specijalan karakter!",
+    "passNotSame": "Šifre se ne podudaraju!",
+    "save": "SPASI",
+    "cancel": "Poništi",
+    "passwordChanged": "Šifra je promjenjena, sada možete da se prijavite sa novom šifrom"
+  },
+  "moviesList": {
+    "title": "Naziv filma",
+    "score": "Ocena filma"
+  }
+}

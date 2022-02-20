@@ -1,0 +1,64 @@
+
+  .form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    color: #fff;
+    font-size: 26px;
+    border-radius: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  
+    h4 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: normal;
+      text-align: center;
+    }
+  
+    form {
+      text-align: center;
+  
+      .input {
+        width: 100%;
+      }
+  
+      .mat-form-field {
+        font-size: 16px;
+      }
+  
+      .mat-error {
+        font-size: 16px;
+        transform: translateY(-15px);
+        text-align: left;
+      }
+  
+      button {
+        margin-top: 20px;
+      }
+    }
+    .sing-in-container {
+      font-size: 15px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+  
+      a {
+        color: #ffcc00;
+      }
+    }
+    mat-form-field {
+      margin-right: 12px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .form {
+      height: 600px;
+      width: 600px;
+    }
+  }

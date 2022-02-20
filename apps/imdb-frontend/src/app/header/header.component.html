@@ -1,0 +1,68 @@
+<mat-sidenav-container class="sidenav-container header">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      
+      
+
+
+      <div class="nav-container" *ngIf="isMobile">
+        <a routerLink="" mat-list-item>{{ 'navBar.register' | translate }}</a>
+        <a routerLink="/login" mat-list-item>{{'navBar.login' | translate}}</a>
+        <a routerLink="/movies" mat-list-item>{{ 'navBar.movies' | translate }}</a>
+        <a id='logout' *ngIf="hasToken" mat-list-item (click)="logout()">{{'navBar.logout' | translate}}</a>
+        <div class="select-container">
+          <p>Language:</p>
+          <ul>
+            <li *ngFor="let lang of translate.getLangs() ">
+            <a (click)="changeLang(lang)"><img src="https://flagcdn.com/24x18/{{'lang.'+ lang +'.flag' |
+            translate | lowercase}}.png"></a>
+            </li>
+            </ul>
+        </div>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="" mat-list-item
+        ><img src="../../assets/logo.png" alt="" class="logo" />
+      </a>
+      <div class="desktopLinks">
+        <a *ngIf="!hasToken" routerLink="" mat-list-item>{{ 'navBar.register' | translate }}</a>
+        <a *ngIf="!hasToken" routerLink="/login" mat-list-item>{{
+          'navBar.login' | translate
+        }}</a>
+        <a routerLink="/movies" mat-list-item>{{ 'navBar.movies' | translate }}</a>
+        <a id='logout' *ngIf="hasToken" (click)="logout()">{{'navBar.logout' | translate}}</a>
+        <a *ngIf="hasToken" routerLink="/dashboard" mat-list-item>{{ 'navBar.dashboard' | translate }}</a>
+        <ul>
+          <li *ngFor="let lang of translate.getLangs() ">
+          <a (click)="changeLang(lang)"><img src="https://flagcdn.com/24x18/{{'lang.'+ lang +'.flag' |
+          translate | lowercase}}.png"></a>
+          </li>
+          </ul>
+      </div> 
+    </mat-toolbar>
+
+    <div class="routes-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

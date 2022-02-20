@@ -1,0 +1,96 @@
+.form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  h4 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  form {
+    text-align: center;
+
+    .input {
+      width: 100%;
+    }
+
+    .mat-form-field {
+      font-size: 16px;
+    }
+
+    .mat-error {
+      font-size: 16px;
+      transform: translateY(-15px);
+      text-align: left;
+    }
+
+    .forgotPass {
+      background:none;
+      border:none;
+      margin:0;
+      padding:0;
+      float: right;
+      cursor: pointer;
+      font-size: 15px;
+      color: white;
+      margin-right: 15px;
+    }
+    
+    .forgotPass:hover {
+      opacity: 1;
+    }
+
+    .login {
+      margin-top: 25px;
+      margin-left: 115px;
+    }
+  }
+  .sing-in-container {
+    font-size: 15px;
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    a {
+      color: #ffcc00;
+    }
+  }
+}
+
+.fb-container{
+  display: flex;
+  justify-content: center;
+
+  .fb-login-btn{
+    background: #4267b2;
+    border-radius: 5px;
+    color: white;
+    height: 40px;
+    text-align: center;
+    width: 250px;
+    margin-top: 10px;
+  }
+}
+
+#fb{
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .form {
+    height: 600px;
+    width: 600px;
+  }
+}

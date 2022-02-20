@@ -1,0 +1,66 @@
+.register-container {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    url('../../assets/register-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+
+  .logo-container {
+    display: none;
+  }
+
+  .register-form-container {
+    height: 100%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .register-container {
+    background: linear-gradient(
+        90.04deg,
+        #000000 19.6%,
+        rgba(0, 0, 0, 0) 99.96%
+      ),
+      url('../../assets/register-bg.png');
+    background-size: cover;
+    color: white;
+    display: flex;
+
+    .logo-container {
+      display: block;
+      padding: 2%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .logo {
+        width: 100%;
+        transform: translateY(-20%);
+      }
+
+      span{
+        font-size: 1.3vw;
+        font-weight: 100;
+        padding-right: 2vw;
+        margin-top: -1vw;
+      }
+    }
+
+    .register-form-container {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+

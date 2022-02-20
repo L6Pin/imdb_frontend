@@ -1,0 +1,63 @@
+<div class="form">
+  <h4 id="h4">{{ 'registration.createAcc' | translate }}</h4>
+  <form [formGroup]="loginForm" (ngSubmit)="register()" novalidate>
+    <div class="form-group">
+      <mat-form-field class="input" appearance="fill" color="accent">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+    </div>
+    <mat-error
+      class="form-text text-muted"
+      *ngIf="
+        loginForm.controls.email.touched &&
+        loginForm.controls.email.errors?.required
+      "
+    >
+      {{ 'registration.missingEmail' | translate }}
+    </mat-error>
+    <mat-error *ngIf="loginForm.controls.email.errors?.pattern">
+      {{ 'registration.emailAlert' | translate }}
+    </mat-error>
+    <div class="form-group">
+      <mat-form-field class="input" appearance="fill" color="accent">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" [type]="hidePw ? 'password' : 'text'"/>
+        <mat-icon matSuffix (click)="hidePw = !hidePw">{{hidePw ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <mat-error
+        class="form-text text-muted"
+        *ngIf="
+          loginForm.controls.password.touched &&
+          loginForm.controls.password.errors?.required
+        "
+      >
+        {{ 'registration.missingPassword' | translate }}
+      </mat-error>
+      <mat-error
+        class="form-text text-muted"
+        *ngIf="loginForm.controls.password.errors?.pattern"
+      >
+        {{ 'registration.passwordLength' | translate }}
+      </mat-error>
+      <mat-error
+        class="form-text text-muted"
+        *ngIf="loginForm.controls.password.errors?.pattern"
+      >
+        {{ 'registration.passwordReq' | translate }}
+      </mat-error>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!loginForm.valid"
+    >
+      {{ 'registration.button' | translate }}
+    </button>
+  </form>
+  <div class="sing-in-container">
+    <p>{{ 'registration.alreadyUser' | translate }}</p>
+    <a routerLink="/login">{{ 'registration.login' | translate }}</a>
+  </div>
+</div>

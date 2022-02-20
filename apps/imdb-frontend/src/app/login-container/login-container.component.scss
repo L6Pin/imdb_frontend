@@ -1,0 +1,19 @@
+.login-container {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url('/assets/register-bg.png');
+  height: 100%;
+  padding: 20px;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

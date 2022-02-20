@@ -1,0 +1,86 @@
+{
+  "lang": {
+    "bs": {"name": "Bosanski", "flag": "ba"},
+    "en": {"name": "English", "flag": "gb"}
+},
+  "navBar": {
+    "register": "Register",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "movies": "Movies",
+    "logout": "Logout"
+  },
+
+  "registration": {
+    "createAcc": "Create a new account",
+    "button": "REGISTER",
+    "alreadyUser": "Already a user?",
+    "login": "LOGIN",
+    "emailAlert": "Incorrectly formed email address!",
+    "missingEmail": "Please enter your email",
+    "missingPassword": "Please enter password!",
+    "passwordReq": "Password should have one capital letter, one lower case letter, one digit and one special symbol!",
+    "passwordLength": "Password should have 8 to 12 characters!",
+    "title": "The best place for all things movies related",
+    "confirmEmail": "Confirmation email has been sent to your email address",
+    "errors": {
+      "userExists": "User is already registered"
+    }
+  },
+
+  "login": {
+    "signin": "Login",
+    "emailAlert": "Please enter your email address!",
+    "missingPassword": "Please enter password!",
+    "passwordLength": "Password should have 8 to 12 characters!",
+    "button": "LOGIN",
+    "signUp": "Don't have an account?",
+    "register": "REGISTER",
+    "errors": {
+      "emailPassword": "Email or password are incorrect",
+      "emailNotConfirmed": "Account not confirmed, please check your email"
+    },
+    "forgotPassword": "Forgot password?",
+    "emailAlertRegex": "Incorrectly formed email address!"
+  },
+  "interceptor": {
+    "errors": {
+      "accessDenied": "Access denied. Please login again"
+    }
+  },
+  "error": {
+    "close": "Close",
+    "server": "Server error, please try again"
+  },
+  "forgotPassword": {
+    "emailAlert": "Please enter your email address!",
+    "requiredPass": "Please enter password!",
+    "requiredConfirmPass": "Please confirm yout new password!",
+    "passNotSame": "Passwords do not match!",
+    "regexPassword": "Password should have one capital letter, one lower case letter, one digit and one special symbol!",
+    "cancel": "Cancel",
+    "send": "Send",
+    "emailSent": "Password reset link sent to your email account",
+    "emailMistake": "Email not sent",
+    "errors": {
+      "userDoesNotExist": "User with given email does not exist"
+    },
+    "emailAlertRegex": "Incorrectly formed email address!"
+  },
+  "resetPassword": {
+    "title": "Reset password",
+    "newPassword": "New password:",
+    "confirmPassword": "Confirm password:",
+    "passwordAlert": "Please enter password!",
+    "confirmAlert": "Please confirm yout new password!",
+    "regexPassword": "Password should have 8 to 12 characters and password should have one capital letter, one lower case letter, one digit and one special symbol!",
+    "passNotSame": "Passwords do not match!",
+    "save": "SAVE",
+    "cancel": "Cancel",
+    "passwordChanged": "Password has been changed, you can now login with new password"
+  },
+  "moviesList": {
+    "title": "Movie title",
+    "score": "Vote score"
+  }
+}
